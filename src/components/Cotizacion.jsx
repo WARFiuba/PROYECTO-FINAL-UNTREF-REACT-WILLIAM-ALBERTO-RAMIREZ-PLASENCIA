@@ -10,7 +10,11 @@ const Cotizacion = (propiedades) => {
             {propiedad === "nombrePropiedad" && `Propiedad:`}
             {propiedad === "nombreUbicacion" && `Ubicación:`}
             {propiedad === "cuenta" && `Precio: $`}
-            {propiedad !== "nombreUbicacion" && propiedad !== "nombrePropiedad" && propiedad !== "cuenta"  && `${propiedad}:` }{propiedades[propiedad]}
+            {propiedad !== "nombreUbicacion" &&
+              propiedad !== "nombrePropiedad" &&
+              propiedad !== "cuenta" &&
+              `${propiedad}:`}
+            {propiedades[propiedad]}
           </p>
         ))}
       </li>

@@ -1,5 +1,5 @@
 import Opciones from "./Opciones";
-import { useEffect, useState,useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import usarCotizador from "../hooks/usarCotizador";
 import Swal from "sweetalert2";
@@ -7,11 +7,11 @@ import usarHistorial from "../hooks/usarHistorial";
 import { FcHome } from "react-icons/fc";
 import { FaFloppyDisk } from "react-icons/fa6";
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
-import stylecot from "../styles/Cotizador.module.css"
+import stylecot from "../styles/Cotizador.module.css";
 
 let valorPoliza = 0;
 const Cotizador = () => {
-   const form =  useRef()
+  const form = useRef();
   const [precio, setPrecio] = useState(0);
   const { elementos, setElementos } = usarCotizador();
   const { historial, setHistorial } = usarHistorial();
@@ -48,13 +48,13 @@ const Cotizador = () => {
     leer();
   }, []);
   useEffect(() => {
-    form.current.reset()
-  },[historial])
+    form.current.reset();
+  }, [historial]);
   return (
     <>
       <nav id={stylecot.historial}>
         <Link to={"/historial"}>
-          <HiOutlineClipboardDocumentList color="#B0916E" />
+          <img src="./public/clipboard.svg" alt="historial" />
         </Link>
       </nav>
 
@@ -62,7 +62,12 @@ const Cotizador = () => {
         Seguros del hogar <FcHome />
       </h1>
 
-      <form ref={form} id={stylecot.container} action="" onSubmit={(e) => e.preventDefault()}>
+      <form
+        ref={form}
+        id={stylecot.container}
+        action=""
+        onSubmit={(e) => e.preventDefault()}
+      >
         <h2>Completa los datos solicitados</h2>
         <Opciones
           nombre={"nombrePropiedad"}
@@ -76,9 +81,11 @@ const Cotizador = () => {
           datos={datos.filter(({ categoria }) => categoria == "ubicacion")}
           label="ubicacion"
         />
-        <label className={stylecot.label} htmlFor="metros2">Ingrese los Metros cuadrados</label>
+        <label className={stylecot.label} htmlFor="metros2">
+          Ingrese los Metros cuadrados
+        </label>
         <input
-            className={stylecot.metters}
+          className={stylecot.metters}
           name="metros2"
           id="metros2"
           type="number"
@@ -100,13 +107,14 @@ const Cotizador = () => {
           cotizar
         </button>
         {precio != 0 && (
-            <section className={stylecot.result}>
-            <p className={stylecot.text}>Precio estimado: ${precio.toFixed(2)}</p>
+          <section className={stylecot.result}>
+            <p className={stylecot.text}>
+              Precio estimado: ${precio.toFixed(2)}
+            </p>
             <button type="button" className={stylecot.btn} onClick={guardar}>
-                <FaFloppyDisk color="#7e58a1" />
+              <FaFloppyDisk color="#7e58a1" />
             </button>
-
-            </section>
+          </section>
         )}
       </form>
     </>
