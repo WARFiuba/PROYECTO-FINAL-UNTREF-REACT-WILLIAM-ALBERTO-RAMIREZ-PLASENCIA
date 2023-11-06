@@ -4,7 +4,7 @@ const Cotizacion = (propiedades) => {
   console.log(propiedades);
   return (
     <>
-      <li className={stylecoti.elements}>
+      <li className={stylecoti.element}>
         {Object.keys(propiedades).map((propiedad, indice) => (
           <p key={indice}>
             {propiedad === "nombrePropiedad" && `Propiedad:`}

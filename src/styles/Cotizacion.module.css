@@ -3,6 +3,10 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    background-color: rgb(197, 153, 241);
     gap: 1rem;
     padding: 1rem;
+    font-size: 1.1rem;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
   }

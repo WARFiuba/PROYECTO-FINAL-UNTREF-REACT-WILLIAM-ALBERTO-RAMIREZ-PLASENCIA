@@ -12,6 +12,12 @@
   text-align: center;
 }
 
+.titulo{
+  font-weight: 400;
+  font-size: 4.6rem;
+  line-height: 1.2;
+}
+
 #container h2{
     color:rgb(96, 108, 118);
     font-weight: 300;
@@ -29,6 +35,11 @@
   border-radius: 0.25rem;
   width: 70%;
   box-shadow: 0 0 0 .025rem rgb(96, 108, 118);
+}
+
+.metters:focus{
+  outline: none;
+  box-shadow: 0 0 0 .1rem rgb(126, 88, 161)
 }
 
 .text {
@@ -59,7 +70,7 @@ color: snow;
 box-shadow: 0 0 0 0 transparent;
 }
 
-.button:active {
+.btn:active {
   transform: scale(0.9);
 }
 
@@ -75,17 +86,56 @@ box-shadow: 0 0 0 0 transparent;
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 1rem;
-    right: 1rem;
-    font-size: 50px;
-    background-color: white;
+    top: 2rem;
+    right: 2rem;
+    font-size: 20px;
     border-radius: 25px;
     width: 60px;
   }
 
+  #historial:active{
+    transform: scale(0.9);
+  }
+
+  #historial img{
+    width: 50px;
+  }
+
+  .floppy{
+    width: 30px;
+  }
+
+  .guardar{
+    cursor: pointer;
+  }
+
+  .guardar:active {
+    transform: scale(0.9);
+  }
+
   @media screen and (max-width:768px){
+
     #container{
         width: calc(100% - 1rem);
         text-align: center;
     }
+
+    #historial{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 4rem;
+      height: 4rem;
+      top: 700px;
+      right: 42%;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    
+    .titulo{
+      font-size: 3.5rem;
+    }
+    
   }
