@@ -1,0 +1,13 @@
+.options {
+  height: 2.5rem;
+  width: 70%;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 .025rem rgb(96, 108, 118);
+}
+
+
+.label {
+    font-weight: 400;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
