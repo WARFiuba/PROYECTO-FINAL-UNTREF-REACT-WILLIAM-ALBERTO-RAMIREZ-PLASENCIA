@@ -2,7 +2,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Cotizador from "./components/Cotizador";
 import ContextoHistorial from "./contexts/ContextoHistorial";
-import Historial from "./components/historial";
+import Historial from "./components/Historial";
 import ContextoCotizador from './contexts/ContextoCotizador';
 import { useState } from 'react';
 import usarLocalStorage from "./hooks/usarLocalStorage"
