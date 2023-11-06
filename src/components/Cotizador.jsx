@@ -54,7 +54,7 @@ const Cotizador = () => {
     <>
       <nav id={stylecot.historial}>
         <Link to={"/historial"}>
-          <object data="image/svg+xml" type="./public/clipboard.svg"></object>
+          <img src="./public/clipboard.webp" alt="" />
         </Link>
       </nav>
 
