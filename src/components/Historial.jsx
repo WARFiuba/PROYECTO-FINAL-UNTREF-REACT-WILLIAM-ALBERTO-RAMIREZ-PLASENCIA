@@ -8,7 +8,7 @@ const Historial = () => {
   const { historial, setHistorial } = usarHistorial();
   return (
     <>
-      <h1 className={styleHis.titulo}>Historial de cotizaciones&ensp;<img src="./public/clipboard.webp" alt="" /></h1>
+      <h1 className={styleHis.titulo}>Historial de cotizaciones&ensp;<img src="./public/images/clipboard.webp" alt="" /></h1>
       <section id={styleHis.cotizaciones}>
         <ul className={styleHis.list}>
           {historial.map((elemento, indice) => (

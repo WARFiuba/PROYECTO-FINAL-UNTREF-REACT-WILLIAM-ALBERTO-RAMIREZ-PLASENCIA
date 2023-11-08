@@ -54,7 +54,7 @@ const Cotizador = () => {
     <>
       <nav id={stylecot.historial}>
         <Link to={"/historial"}>
-          <img src="./public/clipboard.webp" alt="historial" />
+          <img src="./public/images/clipboard.webp" alt="historial" />
         </Link>
       </nav>
 
@@ -112,7 +112,7 @@ const Cotizador = () => {
               Precio estimado: ${precio.toFixed(2)}
             </p>
             <button type="button" className={stylecot.guardar} onClick={guardar}>
-              <img className={stylecot.floppy} src="./public/floppydisk.webp" alt="guardar" />
+              <img className={stylecot.floppy} src="./public/images/floppydisk.webp" alt="guardar" />
             </button>
           </section>
         )}

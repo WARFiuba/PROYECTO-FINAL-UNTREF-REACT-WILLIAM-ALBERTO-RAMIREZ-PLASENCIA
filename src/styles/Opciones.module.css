@@ -7,7 +7,7 @@
 
 .options:focus{
   outline: none;
-  box-shadow: 0 0 0 .1rem rgb(126, 88, 161)
+  box-shadow: 0 0 0 .1rem rgb(126, 88, 161);
 }
 
 
